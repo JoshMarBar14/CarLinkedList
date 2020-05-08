@@ -7,9 +7,44 @@
 //
 
 #include <iostream>
+#include "List.hpp"
+#include "Car.hpp"
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    //int age = 10;
+    Car* car1  = new Car(150, "tesla-X", true);
+    car1->details();
+    
+    Car* car2  = new Car(200, "lamborghini Veneno", false);
+    car2->details();
+    
+    Car* car3  = new Car(300, "Bugatti", false);
+    car3->details();
+    
+    Car* car4  = new Car(300, "McLaren", false);
+    car4->details();
+    
+    Car* car5  = new Car(200, "CyberTruck", true);
+    car5->details();
+    
+    
+    
+  /*  List Josh;
+    
+    Josh.AddNode(1);
+    Josh.AddNode(2);
+    Josh.AddNode(3);
+    
+    
+    
+    
+    Josh.Printlist();
+    
+    Josh.DeleteNode(1);
+    Josh.Printlist();
+   */
+    
     return 0;
 }
