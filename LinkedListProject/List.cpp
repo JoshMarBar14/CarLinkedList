@@ -18,7 +18,7 @@ List::List (){
     
 }
 
-void List::AddNode(int addData){
+void List::AddNode(Car addData){
     nodePtr n = new node;
     n->next = NULL;
     n->data = addData;
@@ -37,16 +37,16 @@ void List::AddNode(int addData){
     }
 }
 
-void List::DeleteNode(int delData){
+void List::DeleteNode(Car delData){
     nodePtr delPtr = NULL;
     temp = head;
     curr = head;
-    while(curr !=NULL && curr->data != delData){
+    while(curr !=NULL && curr->data.GetInfo() != delData.GetInfo()){
         temp = curr;
         curr = curr->next;
     }
     if(curr == NULL){
-        std::cout << delData << "was not in the list\n";
+        std::cout << delData.GetInfo() << "was not in the list\n";
         delete delPtr;
     }
     else{
@@ -58,14 +58,15 @@ void List::DeleteNode(int delData){
             temp = NULL;
         }
         delete delPtr;
-        std::cout << "the value" << delData << "was deleted\n";
+        std::cout << "the value" << delData.GetInfo() << "was deleted\n";
     }
 }
 
 void List::Printlist(){
         curr = head;
         while(curr != NULL){
-        std::cout << curr->data << endl;
+        std::cout << curr->data.GetInfo() << endl;
         curr = curr->next;
     }
+
 }

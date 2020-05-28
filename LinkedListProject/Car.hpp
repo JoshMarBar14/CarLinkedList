@@ -27,6 +27,15 @@ private:
 public:
     void details();
     Car(float _speed, string _carName, bool _eco);
+    Car();
+    
+    ~Car();
+    
+string GetInfo()
+    {
+        return carName;
+    }
+    
     
 };
 

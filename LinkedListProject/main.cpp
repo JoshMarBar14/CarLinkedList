@@ -14,7 +14,8 @@ using namespace std;
 int main(int argc, const char * argv[]) {
 
     //int age = 10;
-    Car* car1  = new Car(150, "tesla-X", true);
+    
+    Car* car1 = new Car(150, "tesla-X", true);
     car1->details();
     
     Car* car2  = new Car(200, "lamborghini Veneno", false);
@@ -30,7 +31,16 @@ int main(int argc, const char * argv[]) {
     car5->details();
     
     
+    List ShowRoom;
     
+    ShowRoom.AddNode(ar1);
+    ShowRoom.AddNode(car2);
+    ShowRoom.AddNode(car3);
+    ShowRoom.AddNode(car4);
+    ShowRoom.AddNode(car5);
+
+    ShowRoom.Printlist();
+
   /*  List Josh;
     
     Josh.AddNode(1);

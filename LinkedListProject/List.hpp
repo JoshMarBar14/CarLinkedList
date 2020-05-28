@@ -9,14 +9,16 @@
 #ifndef List_hpp
 #define List_hpp
 #include <stdio.h>
+#include "Car.hpp"
 
 class List
 {
 private:
    typedef struct node{
        
-        int data;
+        Car data;
         node* next;
+       
    }*nodePtr;
     
     nodePtr head;
@@ -24,8 +26,8 @@ private:
       nodePtr temp;
 public:
     List();
-    void AddNode(int addData);
-    void DeleteNode(int delData);
+    void AddNode(Car addData);
+    void DeleteNode(Car delData);
     void Printlist();
 };
 
