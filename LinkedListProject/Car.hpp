@@ -21,7 +21,7 @@ private:
     float speed = 100;
     bool eco = false;
     string carName = "ferrari";
- 
+    
     
     
 public:
@@ -29,9 +29,25 @@ public:
     Car(float _speed, string _carName, bool _eco);
     Car();
     
-    ~Car();
     
-string GetInfo()
+    
+    void setSpeed(float _speed)
+    {
+        speed = _speed;
+    }
+    
+    void setEco(bool _eco)
+    {
+        eco = _eco;
+    }
+    
+    void setName(string _carName)
+    {
+        carName = _carName;
+    }
+    
+    
+    string GetInfo()
     {
         return carName;
     }

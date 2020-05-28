@@ -22,19 +22,19 @@ Car::Car(float _speed, string _carName, bool _eco){
 
 
 void Car::details(){
-
+    
     std::cout << "the cars speed is " << speed << endl;
     std::cout << "the cars name is " << carName << endl;
     
     if(eco == true){
-       
+        
         std::cout << "the car is eco friendly" << endl;
     }
     
     if(eco == false){
         
         std::cout << "the car is not eco friendly" << endl;
-
+        
     }
     
 }

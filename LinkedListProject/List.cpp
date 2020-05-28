@@ -6,6 +6,7 @@
 //  Copyright © 2020 Josh Barton . All rights reserved.
 //
 
+
 #include "List.hpp"
 #include <iostream>
 using namespace std;
@@ -18,7 +19,7 @@ List::List (){
     
 }
 
-void List::AddNode(Car addData){
+void List::AddNode(Car* addData){
     nodePtr n = new node;
     n->next = NULL;
     n->data = addData;
@@ -37,16 +38,16 @@ void List::AddNode(Car addData){
     }
 }
 
-void List::DeleteNode(Car delData){
+void List::DeleteNode(Car* delData){
     nodePtr delPtr = NULL;
     temp = head;
     curr = head;
-    while(curr !=NULL && curr->data.GetInfo() != delData.GetInfo()){
+    while(curr !=NULL && curr->data->GetInfo() != delData->GetInfo()){
         temp = curr;
         curr = curr->next;
     }
     if(curr == NULL){
-        std::cout << delData.GetInfo() << "was not in the list\n";
+        std::cout << delData->GetInfo() << "was not in the list\n";
         delete delPtr;
     }
     else{
@@ -58,15 +59,20 @@ void List::DeleteNode(Car delData){
             temp = NULL;
         }
         delete delPtr;
-        std::cout << "the value" << delData.GetInfo() << "was deleted\n";
+        std::cout << "the value" << delData->GetInfo() << "was deleted\n";
     }
 }
 
 void List::Printlist(){
-        curr = head;
-        while(curr != NULL){
-        std::cout << curr->data.GetInfo() << endl;
+    curr = head;
+    while(curr != NULL){
+        std::cout << curr->data->GetInfo() << endl;
+        curr->data->details();
         curr = curr->next;
+        
     }
-
+    
+    
+    
 }
+

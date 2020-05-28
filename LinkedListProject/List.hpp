@@ -14,22 +14,23 @@
 class List
 {
 private:
-   typedef struct node{
-       
-        Car data;
+    typedef struct node{
+        
+        Car* data;
         node* next;
-       
-   }*nodePtr;
+        
+    }*nodePtr;
     
     nodePtr head;
-      nodePtr curr;
-      nodePtr temp;
+    nodePtr curr;
+    nodePtr temp;
 public:
     List();
-    void AddNode(Car addData);
-    void DeleteNode(Car delData);
+    void AddNode(Car* addData);
+    void DeleteNode(Car* delData);
     void Printlist();
 };
 
 
 #endif /* LinkedList_hpp */
+
