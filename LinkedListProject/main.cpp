@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
     
     List ShowRoom;
     
-    ShowRoom.AddNode(ar1);
+    ShowRoom.AddNode(car1);
     ShowRoom.AddNode(car2);
     ShowRoom.AddNode(car3);
     ShowRoom.AddNode(car4);
